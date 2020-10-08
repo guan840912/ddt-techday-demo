@@ -17,9 +17,9 @@ DDT Tech Day Demo CDK Part.
 ## How to use ?!
 ```bash
 #export ENVVARS 
-export ROUTE53_HOST_ZONE_ID=ZXXXXXXXXXX
-export ROUTE53_HOST_ZONE_NAME=example.com
-export AMAZON_Certificates_Manager_ARN=arn:aws:acm:region:account-id:certificate/xxxxxxx-oooo-oooo-oooo-xxxxxxxx
+export ZONEID=ZXXXXXXXXXX
+export ZONENAME=example.com
+export ACMARN=arn:aws:acm:region:account-id:certificate/xxxxxxx-oooo-oooo-oooo-xxxxxxxx
 
 #To synth 
 cdk synth -c zoneName=$ZONENAME  -c zoneId=$ZONEID -c acm=$ACMARN
