@@ -1,8 +1,11 @@
 # ddt-techday-demo
 DDT Tech Day Demo CDK Part.
 
-## Create asg web server. 
-![](./image/asg.png)
+## Create asg web server.
+- AWS Resource View
+![](./image/asg-aws-resource.png)
+- AWS CDK Constructs View
+![](./image/asg-constructs.png)
 
 ## Need three value ?!
 1. `ZONEID` and `ZONENAME`  like `example.com` and `ZXXXXXXXXXX`  on Rouet53 Page.
