@@ -1,7 +1,7 @@
 const { AwsCdkTypeScriptApp } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: "1.66.0",
+  cdkVersion: "1.67.0",
   name: "ddt-techday-demo",
   authorName: 'Neil Kuan',
   authorEmail: 'guan840912@gmail.com',

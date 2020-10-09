@@ -56,7 +56,8 @@ exit 0`);
       instanceType: new ec2.InstanceType('t2.micro'),
       machineImage: ec2.MachineImage.latestAmazonLinux(
         { generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2 }),
-      desiredCapacity: 3,
+      maxCapacity: 3,
+      minCapacity: 1,
       spotPrice: '0.0104',
       blockDevices: [
         {
