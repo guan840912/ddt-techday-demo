@@ -40,17 +40,21 @@ systemctl enable amazon-ssm-agent
 systemctl restart amazon-ssm-agent
 exit 0`);
     // define resources here...
+    // new Vpc !!!
     const vpc = new ec2.Vpc(this, 'newVpc', {
       maxAzs: 2,
       natGateways: 1,
     });
     const acmArn = props.acm;
+    // new CA !!!
     const acm = certmgr.Certificate.fromCertificateArn(this, 'demoAcm', acmArn);
+    // new Load balance !!!
     const alb = new elb.ApplicationLoadBalancer(this, 'myalb', {
       vpc,
       internetFacing: true,
       loadBalancerName: 'demoalb',
     } );
+    // new auto scaling !!!
     const asg = new asing.AutoScalingGroup(this, 'webASG', {
       vpc,
       instanceType: new ec2.InstanceType('t2.micro'),
