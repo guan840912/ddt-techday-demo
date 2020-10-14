@@ -26,7 +26,6 @@ test('Snapshot', () => {
   expect(stack).toHaveResource('AWS::AutoScaling::AutoScalingGroup', {
     MaxSize: '3',
     MinSize: '1',
-    DesiredCapacity: '3',
     LaunchConfigurationName: {
       Ref: 'testingwebASGLaunchConfigAD0C50A7',
     },
@@ -35,19 +34,6 @@ test('Snapshot', () => {
         Key: 'Name',
         PropagateAtLaunch: true,
         Value: 'testing/testing/webASG',
-      },
-    ],
-    TargetGroupARNs: [
-      {
-        Ref: 'testingmyalbmyWebhttpswebServerGroupC563DBDC',
-      },
-    ],
-    VPCZoneIdentifier: [
-      {
-        Ref: 'testingnewVpcPrivateSubnet1Subnet948383BC',
-      },
-      {
-        Ref: 'testingnewVpcPrivateSubnet2Subnet063DDED4',
       },
     ],
   });
@@ -65,7 +51,6 @@ test('Snapshot-imput-interface', () => {
   expect(stack).toHaveResource('AWS::AutoScaling::AutoScalingGroup', {
     MaxSize: '3',
     MinSize: '1',
-    DesiredCapacity: '3',
     LaunchConfigurationName: {
       Ref: 'testingwebASGLaunchConfigAD0C50A7',
     },
@@ -74,19 +59,6 @@ test('Snapshot-imput-interface', () => {
         Key: 'Name',
         PropagateAtLaunch: true,
         Value: 'testing/testing/webASG',
-      },
-    ],
-    TargetGroupARNs: [
-      {
-        Ref: 'testingmyalbmyWebhttpswebServerGroupC563DBDC',
-      },
-    ],
-    VPCZoneIdentifier: [
-      {
-        Ref: 'testingnewVpcPrivateSubnet1Subnet948383BC',
-      },
-      {
-        Ref: 'testingnewVpcPrivateSubnet2Subnet063DDED4',
       },
     ],
   });
