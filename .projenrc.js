@@ -1,7 +1,7 @@
-const { AwsCdkTypeScriptApp } = require('projen');
+const { AwsCdkTypeScriptApp, Semver } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: "1.67.0",
+  cdkVersion: "1.68.0",
   name: "ddt-techday-demo",
   authorName: 'Neil Kuan',
   authorEmail: 'guan840912@gmail.com',
@@ -14,8 +14,10 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-route53',
     '@aws-cdk/aws-route53-targets',
+    '@aws-cdk/aws-s3',
   ],
 });
+
 project.addScripts({
   destroy: 'cdk destroy'
 });
