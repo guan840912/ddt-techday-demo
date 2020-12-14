@@ -1,8 +1,8 @@
-const { AwsCdkTypeScriptApp, Semver } = require('projen');
+const { AwsCdkTypeScriptApp } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: "1.78.0",
-  name: "ddt-techday-demo",
+  cdkVersion: '1.78.0',
+  name: 'ddt-techday-demo',
   authorName: 'Neil Kuan',
   authorEmail: 'guan840912@gmail.com',
   cdkDependencies: [
@@ -16,13 +16,11 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-route53-targets',
     '@aws-cdk/aws-s3',
   ],
+  dependabot: false,
 });
 
-project.addScripts({
-  destroy: 'cdk destroy'
-});
 
-const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log','coverage','.DS_Store'];
+const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', '.DS_Store'];
 project.gitignore.exclude(...common_exclude);
 project.npmignore.exclude(...common_exclude);
 
