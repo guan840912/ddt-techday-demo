@@ -1,7 +1,7 @@
 const { AwsCdkTypeScriptApp, Semver } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: "1.68.0",
+  cdkVersion: "1.78.0",
   name: "ddt-techday-demo",
   authorName: 'Neil Kuan',
   authorEmail: 'guan840912@gmail.com',
