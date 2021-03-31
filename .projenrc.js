@@ -16,6 +16,7 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-route53-targets',
     '@aws-cdk/aws-s3',
   ],
+  defaultReleaseBranch: 'main',
   dependabot: false,
 });
 
